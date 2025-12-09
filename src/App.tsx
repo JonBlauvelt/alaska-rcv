@@ -1,11 +1,11 @@
 // @ts-nocheck
 
-import { SimContext, SimContextProvider } from './SimContext';
+import { SimContextProvider } from './SimContext';
 
 import Simulation from './components/Simulation';
 import Explainer from './components/Explainer';
 import Nav from './components/Nav';
-import { useContext, useEffect, useState } from 'react';
+import { useState } from 'react';
 import CaseStudySelector from './components/CaseStudySelector';
 import { elections } from './Transitions';
 
@@ -15,8 +15,8 @@ export default () => {
     let parts = window.location.pathname.split('/');
     let tag = parts?.[1];
     let election = undefined;
-    if(window.location.pathname != ''){
-        let electionMatches = elections.filter(e => e.tag == tag)
+    if(window.location.pathname !== ''){
+        let electionMatches = elections.filter(e => e.tag === tag)
         if(electionMatches.length > 0){
             election = electionMatches[0];
         }
