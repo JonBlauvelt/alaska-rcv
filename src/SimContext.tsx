@@ -11,7 +11,7 @@ import VoterCount from './components/VoterCount';
 import DarkenLayer from './components/DarkenLayer';
 import VideoEmbed from './components/VideoEmbed';
 import Video from './components/Video';
-import { getTransitions, elections, ElectionDetails, DimensionTag } from './Transitions';
+import { getTransitions, ElectionDetails } from './Transitions';
 import Burlington2009 from './content/Burlington2009';
 import { getDimensionFromURL } from './TransitionTemplates';
 
